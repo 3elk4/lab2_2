@@ -7,7 +7,12 @@ public class SimilarityFinderBehaviorTest {
     }
 
     @Test
-    void oneSequenceIsNull(){
+    void firstSequenceIsNull(){
+
+    }
+
+    @Test
+    void secondSequenceIsNull(){
 
     }
 
@@ -17,7 +22,7 @@ public class SimilarityFinderBehaviorTest {
     }
 
     @Test
-    void checkIfSimilarityFinderOperateSequenceSearcher(){
+    void checkIfSimilarityFinderOperatesSequenceSearcher(){
 
     }
 }
