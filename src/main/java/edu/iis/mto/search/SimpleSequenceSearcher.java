@@ -1,6 +1,14 @@
 package edu.iis.mto.search;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class SimpleSequenceSearcher implements SequenceSearcher{
+    AtomicInteger callNumber = new AtomicInteger(0);
+
+    public int getCallNumber(){
+        return callNumber.get();
+    }
+
     @Override
     public SearchResult search(int elem, int[] seq) {
         callNumber.getAndIncrement();
