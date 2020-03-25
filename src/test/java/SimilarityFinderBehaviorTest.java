@@ -3,17 +3,16 @@ import edu.iis.mto.search.SimpleSequenceSearcher;
 import edu.iis.mto.similarity.SimilarityFinder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class SimilarityFinderBehaviorTest {
-    private SimilarityFinder similarityFinder;
-    private SequenceSearcher searcher;
+    private static SimilarityFinder similarityFinder;
+    private static SequenceSearcher searcher;
     private int[] sequence1 = new int[]{1, 2, 3};
     private int[] sequence2 = new int[]{4, 5, 6};
 
-    @BeforeEach
-    void init(){
+    @BeforeAll
+    static void init(){
         searcher = new SimpleSequenceSearcher();
         similarityFinder = new SimilarityFinder(searcher);
     }
@@ -35,7 +34,8 @@ public class SimilarityFinderBehaviorTest {
 
     @Test
     void checkIfSequenceSearcherIsNull(){
-
+        SimilarityFinder finder = new SimilarityFinder(null);
+        Assertions.assertThrows(NullPointerException.class, () -> finder.calculateJackardSimilarity(sequence1, sequence2));
     }
 
     @Test
