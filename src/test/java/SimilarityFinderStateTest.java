@@ -70,7 +70,10 @@ public class SimilarityFinderStateTest {
 
     @Test
     void checkIfAllCommonValuesExceptOneInSequences(){
-
+        sequence1 = new int[]{1, 2, 3, 4, 5};
+        sequence2 = new int[]{5, 4, 3, 2};
+        double result = similarityFinder.calculateJackardSimilarity(sequence1, sequence2);
+        Assertions.assertEquals(0.8, result);
     }
 
 
