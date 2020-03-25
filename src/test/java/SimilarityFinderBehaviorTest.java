@@ -25,12 +25,12 @@ public class SimilarityFinderBehaviorTest {
 
     @Test
     void checkIfFirstSequenceIsNull(){
-
+        Assertions.assertThrows(NullPointerException.class, () -> similarityFinder.calculateJackardSimilarity(null, sequence2));
     }
 
     @Test
     void checkIfSecondSequenceIsNull(){
-
+        Assertions.assertThrows(NullPointerException.class, () -> similarityFinder.calculateJackardSimilarity(sequence1, null));
     }
 
     @Test
