@@ -2,22 +2,22 @@ import org.junit.jupiter.api.Test;
 
 public class SimilarityFinderBehaviorTest {
     @Test
-    void bothSequencesAreNull(){
+    void checkIfBothSequencesAreNull(){
 
     }
 
     @Test
-    void firstSequenceIsNull(){
+    void checkIfFirstSequenceIsNull(){
 
     }
 
     @Test
-    void secondSequenceIsNull(){
+    void checkIfSecondSequenceIsNull(){
 
     }
 
     @Test
-    void sequenceSearcherIsNull(){
+    void checkIfSequenceSearcherIsNull(){
 
     }
 

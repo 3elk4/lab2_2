@@ -14,37 +14,37 @@ public class SimilarityFinderStateTest {
     }
 
     @Test
-    void shouldBeBothSequencesEmpty(){
+    void checkIfBothSequencesEmpty(){
 
     }
 
     @Test
-    void shouldBeOneSequenceEmpty(){
+    void checkIfFirstSequenceEmpty(){
 
     }
 
     @Test
-    void shouldBeOneSequenceEmpty2(){
+    void checkIfSecondSequenceEmpty(){
 
     }
 
     @Test
-    void shouldBeOneCommonValueInSequences(){
+    void checkIfOneCommonValueInSequences(){
 
     }
 
     @Test
-    void shouldBeAllCommonValuesInSequences(){
+    void checkIfAllCommonValuesInSequences(){
 
     }
 
     @Test
-    void shouldBeNoneCommonValuesInSequences(){
+    void checkIfNoneCommonValuesInSequences(){
 
     }
 
     @Test
-    void shouldBeAllCommonValuesExceptOneInSequences(){
+    void checkIfAllCommonValuesExceptOneInSequences(){
 
     }
 
