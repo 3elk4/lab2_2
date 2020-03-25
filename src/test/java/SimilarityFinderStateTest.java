@@ -54,7 +54,10 @@ public class SimilarityFinderStateTest {
 
     @Test
     void checkIfAllCommonValuesInSequences(){
-
+        sequence1 = new int[]{1, 2, 3, 4, 5};
+        sequence2 = new int[]{5, 4, 3, 2, 1};
+        double result = similarityFinder.calculateJackardSimilarity(sequence1, sequence2);
+        Assertions.assertEquals(TOTAL_SIMILARITY, result);
     }
 
     @Test
