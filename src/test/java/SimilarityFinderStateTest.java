@@ -1,21 +1,31 @@
+import edu.iis.mto.search.SequenceSearcher;
 import edu.iis.mto.search.SimpleSequenceSearcher;
 import edu.iis.mto.similarity.SimilarityFinder;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 public class SimilarityFinderStateTest {
     static private SimilarityFinder similarityFinder;
-    static private int[] emptySequence;
+    static private SequenceSearcher searcher;
+    static private int[] sequence1;
+    static private int[] sequence2;
+
+    static private final double TOTAL_SIMILARITY = 1.0;
+    static private final double NO_SIMILARITY = 0.0;
 
     @BeforeAll
     static void init(){
-        emptySequence = new int[]{};
-        similarityFinder = new SimilarityFinder(new SimpleSequenceSearcher());
+        searcher = new SimpleSequenceSearcher();
+        similarityFinder = new SimilarityFinder(searcher);
     }
 
     @Test
     void checkIfBothSequencesEmpty(){
-
+        sequence1 = new int[]{};
+        sequence2 = new int[]{};
+        double result = similarityFinder.calculateJackardSimilarity(sequence1, sequence2);
+        Assertions.assertEquals(TOTAL_SIMILARITY, result);
     }
 
     @Test
