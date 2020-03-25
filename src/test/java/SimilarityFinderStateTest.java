@@ -30,12 +30,18 @@ public class SimilarityFinderStateTest {
 
     @Test
     void checkIfFirstSequenceEmpty(){
-
+        sequence1 = new int[]{};
+        sequence2 = new int[]{1, 2, 3};
+        double result = similarityFinder.calculateJackardSimilarity(sequence1, sequence2);
+        Assertions.assertEquals(NO_SIMILARITY, result);
     }
 
     @Test
     void checkIfSecondSequenceEmpty(){
-
+        sequence1 = new int[]{1, 2, 3};
+        sequence2 = new int[]{};
+        double result = similarityFinder.calculateJackardSimilarity(sequence1, sequence2);
+        Assertions.assertEquals(NO_SIMILARITY, result);
     }
 
     @Test
